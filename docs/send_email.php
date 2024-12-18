@@ -1,10 +1,11 @@
 <?php
 // Include the PHPMailer class
-require 'vendor/autoload.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+require 'phpmailer/src/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'saivamsidudigam@gmail.com';  // Your Gmail address
-        $mail->Password = 'kltp bxtj bbrl fkpv';  // Your Gmail App Password
+        $mail->Password = 'xozd rfwj tcct cjmt';  // Your Gmail App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
